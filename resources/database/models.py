@@ -18,4 +18,9 @@ class Image(db.Model):
         self.image_path = path
 
     def json(self):
-        return {'imageTimestamp': self.date_created, 'imageName': self.image_name, 'imageURL': self.image_path}
+        return {
+            'imageId': self.image_id,
+            'imageTimestamp': self.date_created,
+            'imageName': self.image_name,
+            'imageUrl': self.image_path
+        }
